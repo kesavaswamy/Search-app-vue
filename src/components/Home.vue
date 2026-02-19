@@ -236,7 +236,7 @@ function prevPage() {
   background: #f0f7ff;
 }
 .home-container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
 }

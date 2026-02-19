@@ -12,7 +12,7 @@ import './assets/resultsgrid.css';
 
 <style scoped>
 main {
-  max-width: 90%;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
 }
