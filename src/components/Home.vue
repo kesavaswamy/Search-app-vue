@@ -11,7 +11,7 @@
     </div>
     <div v-if="error" class="error">{{ error }}</div>
     <!-- <KendoResultsGrid :results="results" v-if="results.length" /> -->
-    <div v-if="results.length">
+    <div class="table-container">
       <table class="data-table">
         <thead>
           <tr>
@@ -40,6 +40,9 @@
           </tr>
         </thead>
         <tbody>
+          <tr v-if="!results.length && !loading">
+            <td colspan="8" class="no-results">No users to display. Enter a search term and click Search.</td>
+          </tr>
           <tr v-for="user in paginatedResults" :key="user.id">
             <td>{{ user.id }}</td>
             <td>{{ user.name }}</td>
@@ -54,14 +57,11 @@
           </tr>
         </tbody>
       </table>
-      <div class="pagination">
+      <div v-if="results.length" class="pagination">
         <button @click="prevPage" :disabled="currentPage === 1" class="page-btn">Previous</button>
         <span class="page-info">Page {{ currentPage }} of {{ totalPages }} ({{ results.length }} total results)</span>
         <button @click="nextPage" :disabled="currentPage === totalPages" class="page-btn">Next</button>
       </div>
-    </div>
-    <div v-else-if="!loading && !error">
-      <p>No users to display.</p>
     </div>
   </div>
 </template>
@@ -239,6 +239,14 @@ function prevPage() {
   max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
+}
+.table-container {
+  margin-top: 1.5rem;
+}
+.no-results {
+  text-align: center;
+  font-style: italic;
+  color: #666;
 }
 .search-bar {
   display: flex;
