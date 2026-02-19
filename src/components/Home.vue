@@ -215,6 +215,7 @@ function prevPage() {
   border: 1px solid #ddd;
   padding: 0.5rem 0.75rem;
   text-align: left;
+  white-space: nowrap;
 }
 .data-table th {
   background: #f5f7fa;
