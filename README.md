@@ -2,6 +2,22 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+This project is developed using Vue 3.
+
+Features:
+- Search box
+- Search button
+- API call using Axios
+- Results displayed in grid
+- Enter key support
+
+How to run:
+
+1. Clone the repo
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open http://localhost:3003/
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
